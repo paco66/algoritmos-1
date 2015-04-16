@@ -1,0 +1,51 @@
+# Ordenamiento por Inserción 
+Es una manera muy natural de ordenar para un ser humano, y puede usarse fácilmente. Requiere O(n²) operaciones para ordenar una lista de n elementos.
+
+*Su funcionamiento es el siguiente:*
+
+ 1. Seleccionar el segundo numero.
+ 2. Comparando con el numero anterior, si es menor, cambian de lugar. 
+ 3. Se toma el tercer numero, comparando con el segundo si es menor, se compara con el primero, si es menor se cambia de lugar, sino se cambia de lugar con el segundo. 
+ 4. Se repite el ciclo con todos los restantes.
+
+*Pseudocodigo*
+```
+    para j=2 hasta n
+      aux =A[j]
+      para j=i+1 hasta n
+        i=j-1
+        mientras i>0 and A[i]>aux
+          A[i+1]=A[i]
+          i=i+1
+        fin mientras
+        A[i+1]=aux
+      fin para
+    fin para
+```    
+Tiempo de ejecucion
+
+![GitHub Logo](http://www.wiris.net/demo/editor/render.png?demo-image&mml=%3Cmath%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F1998%2FMath%2FMathML%22%3E%3Cmi%3EC%3C%2Fmi%3E%3Cmn%3E1%3C%2Fmn%3E%3Cmo%3E%26%23160%3B%3C%2Fmo%3E%3Cmo%3E%26%23160%3B%3C%2Fmo%3E%3Cmo%3E%26%23160%3B%3C%2Fmo%3E%3Cmi%3En%3C%2Fmi%3E%3Cmspace%20linebreak%3D%22newline%22%2F%3E%3Cmi%3EC%3C%2Fmi%3E%3Cmn%3E2%3C%2Fmn%3E%3Cmo%3E%26%23160%3B%3C%2Fmo%3E%3Cmo%3E%26%23160%3B%3C%2Fmo%3E%3Cmo%3E%26%23160%3B%3C%2Fmo%3E%3Cmi%3En%3C%2Fmi%3E%3Cmo%3E%2D%3C%2Fmo%3E%3Cmn%3E1%3C%2Fmn%3E%3Cmspace%20linebreak%3D%22newline%22%2F%3E%3Cmi%3EC%3C%2Fmi%3E%3Cmn%3E3%3C%2Fmn%3E%3Cmo%3E%26%23160%3B%3C%2Fmo%3E%3Cmo%3E%26%23160%3B%3C%2Fmo%3E%3Cmo%3E%26%23160%3B%3C%2Fmo%3E%3Cmi%3En%3C%2Fmi%3E%3Cmo%3E%2D%3C%2Fmo%3E%3Cmn%3E1%3C%2Fmn%3E%3Cmspace%20linebreak%3D%22newline%22%2F%3E%3Cmi%3EC%3C%2Fmi%3E%3Cmn%3E4%3C%2Fmn%3E%3Cmo%3E%26%23160%3B%3C%2Fmo%3E%3Cmo%3E%26%23160%3B%3C%2Fmo%3E%3Cmo%3E%26%23160%3B%3C%2Fmo%3E%3Cmunderover%3E%3Cmo%3E%26%238721%3B%3C%2Fmo%3E%3Cmrow%3E%3Cmi%3Ej%3C%2Fmi%3E%3Cmo%3E%3D%3C%2Fmo%3E%3Cmn%3E2%3C%2Fmn%3E%3C%2Fmrow%3E%3Cmi%3En%3C%2Fmi%3E%3C%2Fmunderover%3E%3Cmo%3E%26%23160%3B%3C%2Fmo%3E%3Cmi%3Et%3C%2Fmi%3E%3Cmo%3E%26%23160%3B%3C%2Fmo%3E%3Cmi%3Ej%3C%2Fmi%3E%3Cmspace%20linebreak%3D%22newline%22%2F%3E%3Cmi%3EC%3C%2Fmi%3E%3Cmn%3E5%3C%2Fmn%3E%3Cmo%3E%26%23160%3B%3C%2Fmo%3E%3Cmo%3E%26%23160%3B%3C%2Fmo%3E%3Cmo%3E%26%23160%3B%3C%2Fmo%3E%3Cmunderover%3E%3Cmrow%3E%3Cmo%3E%26%238721%3B%3C%2Fmo%3E%3Cmo%3E%26%23160%3B%3C%2Fmo%3E%3Cmi%3Et%3C%2Fmi%3E%3Cmo%3E%26%23160%3B%3C%2Fmo%3E%3C%2Fmrow%3E%3Cmrow%3E%3Cmi%3Ej%3C%2Fmi%3E%3Cmo%3E%3D%3C%2Fmo%3E%3Cmn%3E2%3C%2Fmn%3E%3C%2Fmrow%3E%3Cmi%3En%3C%2Fmi%3E%3C%2Fmunderover%3E%3Cmi%3Ej%3C%2Fmi%3E%3Cmo%3E%2D%3C%2Fmo%3E%3Cmn%3E1%3C%2Fmn%3E%3Cmspace%20linebreak%3D%22newline%22%2F%3E%3Cmi%3EC%3C%2Fmi%3E%3Cmn%3E6%3C%2Fmn%3E%3Cmo%3E%26%23160%3B%3C%2Fmo%3E%3Cmo%3E%26%23160%3B%3C%2Fmo%3E%3Cmo%3E%26%23160%3B%3C%2Fmo%3E%3Cmunderover%3E%3Cmrow%3E%3Cmo%3E%26%238721%3B%3C%2Fmo%3E%3Cmi%3Et%3C%2Fmi%3E%3Cmo%3E%26%23160%3B%3C%2Fmo%3E%3C%2Fmrow%3E%3Cmrow%3E%3Cmi%3Ej%3C%2Fmi%3E%3Cmo%3E%3D%3C%2Fmo%3E%3Cmn%3E2%3C%2Fmn%3E%3C%2Fmrow%3E%3Cmi%3En%3C%2Fmi%3E%3C%2Fmunderover%3E%3Cmi%3Ej%3C%2Fmi%3E%3Cmo%3E%2D%3C%2Fmo%3E%3Cmn%3E1%3C%2Fmn%3E%3Cmspace%20linebreak%3D%22newline%22%2F%3E%3Cmi%3EC%3C%2Fmi%3E%3Cmn%3E7%3C%2Fmn%3E%3Cmo%3E%26%23160%3B%3C%2Fmo%3E%3Cmo%3E%26%23160%3B%3C%2Fmo%3E%3Cmo%3E%26%23160%3B%3C%2Fmo%3E%3Cmi%3En%3C%2Fmi%3E%3Cmo%3E%2D%3C%2Fmo%3E%3Cmn%3E1%3C%2Fmn%3E%3Cmspace%20linebreak%3D%22newline%22%2F%3E%3Cmspace%20linebreak%3D%22newline%22%2F%3E%3Cmi%3En%3C%2Fmi%3E%3Cmo%3E%26%23160%3B%3C%2Fmo%3E%3Cmo%3E%2B%3C%2Fmo%3E%3Cmo%3E%26%23160%3B%3C%2Fmo%3E%3Cmn%3E3%3C%2Fmn%3E%3Cmo%3E%28%3C%2Fmo%3E%3Cmi%3En%3C%2Fmi%3E%3Cmo%3E%2D%3C%2Fmo%3E%3Cmn%3E1%3C%2Fmn%3E%3Cmo%3E%29%3C%2Fmo%3E%3Cmo%3E%26%23160%3B%3C%2Fmo%3E%3Cmo%3E%2B%3C%2Fmo%3E%3Cmo%3E%26%23160%3B%3C%2Fmo%3E%3Cmo%3E%26%23160%3B%3C%2Fmo%3E%3Cmfrac%3E%3Cmrow%3E%3Cmi%3En%3C%2Fmi%3E%3Cmo%3E%28%3C%2Fmo%3E%3Cmi%3En%3C%2Fmi%3E%3Cmo%3E%2B%3C%2Fmo%3E%3Cmn%3E1%3C%2Fmn%3E%3Cmo%3E%29%3C%2Fmo%3E%3C%2Fmrow%3E%3Cmn%3E2%3C%2Fmn%3E%3C%2Fmfrac%3E%3Cmo%3E%2D%3C%2Fmo%3E%3Cmn%3E1%3C%2Fmn%3E%3Cmo%3E%26%23160%3B%3C%2Fmo%3E%3Cmo%3E%2B%3C%2Fmo%3E%3Cmn%3E2%3C%2Fmn%3E%3Cmo%3E%26%23160%3B%3C%2Fmo%3E%3Cmfrac%3E%3Cmrow%3E%3Cmi%3En%3C%2Fmi%3E%3Cmo%3E%28%3C%2Fmo%3E%3Cmi%3En%3C%2Fmi%3E%3Cmo%3E%2D%3C%2Fmo%3E%3Cmn%3E1%3C%2Fmn%3E%3Cmo%3E%29%3C%2Fmo%3E%3C%2Fmrow%3E%3Cmn%3E2%3C%2Fmn%3E%3C%2Fmfrac%3E%3Cmspace%20linebreak%3D%22newline%22%2F%3E%3Cmi%3En%3C%2Fmi%3E%3Cmo%3E%26%23160%3B%3C%2Fmo%3E%3Cmo%3E%2B%3C%2Fmo%3E%3Cmo%3E%26%23160%3B%3C%2Fmo%3E%3Cmn%3E3%3C%2Fmn%3E%3Cmi%3En%3C%2Fmi%3E%3Cmo%3E%26%23160%3B%3C%2Fmo%3E%3Cmo%3E%2D%3C%2Fmo%3E%3Cmn%3E3%3C%2Fmn%3E%3Cmo%3E%26%23160%3B%3C%2Fmo%3E%3Cmo%3E%2B%3C%2Fmo%3E%3Cmfrac%3E%3Cmrow%3E%3Cmsup%3E%3Cmi%3En%3C%2Fmi%3E%3Cmn%3E2%3C%2Fmn%3E%3C%2Fmsup%3E%3Cmo%3E%26%23160%3B%3C%2Fmo%3E%3Cmo%3E%2B%3C%2Fmo%3E%3Cmo%3E%26%23160%3B%3C%2Fmo%3E%3Cmi%3En%3C%2Fmi%3E%3C%2Fmrow%3E%3Cmn%3E2%3C%2Fmn%3E%3C%2Fmfrac%3E%3Cmo%3E%2D%3C%2Fmo%3E%3Cmn%3E1%3C%2Fmn%3E%3Cmo%3E%26%23160%3B%3C%2Fmo%3E%3Cmo%3E%2B%3C%2Fmo%3E%3Cmsup%3E%3Cmi%3En%3C%2Fmi%3E%3Cmn%3E2%3C%2Fmn%3E%3C%2Fmsup%3E%3Cmo%3E%26%23160%3B%3C%2Fmo%3E%3Cmo%3E%2D%3C%2Fmo%3E%3Cmo%3E%26%23160%3B%3C%2Fmo%3E%3Cmi%3En%3C%2Fmi%3E%3Cmspace%20linebreak%3D%22newline%22%2F%3E%3Cmn%3E3%3C%2Fmn%3E%3Cmi%3En%3C%2Fmi%3E%3Cmo%3E%26%23160%3B%3C%2Fmo%3E%3Cmo%3E%2D%3C%2Fmo%3E%3Cmn%3E4%3C%2Fmn%3E%3Cmo%3E%26%23160%3B%3C%2Fmo%3E%3Cmo%3E%2B%3C%2Fmo%3E%3Cmfrac%3E%3Cmsup%3E%3Cmi%3En%3C%2Fmi%3E%3Cmn%3E2%3C%2Fmn%3E%3C%2Fmsup%3E%3Cmn%3E2%3C%2Fmn%3E%3C%2Fmfrac%3E%3Cmo%3E%2B%3C%2Fmo%3E%3Cmfrac%3E%3Cmi%3En%3C%2Fmi%3E%3Cmn%3E2%3C%2Fmn%3E%3C%2Fmfrac%3E%3Cmo%3E%2B%3C%2Fmo%3E%3Cmsup%3E%3Cmi%3En%3C%2Fmi%3E%3Cmn%3E2%3C%2Fmn%3E%3C%2Fmsup%3E%3Cmspace%20linebreak%3D%22newline%22%2F%3E%3Cmn%3E3%3C%2Fmn%3E%3Cmfrac%3E%3Cmsup%3E%3Cmi%3En%3C%2Fmi%3E%3Cmn%3E2%3C%2Fmn%3E%3C%2Fmsup%3E%3Cmn%3E2%3C%2Fmn%3E%3C%2Fmfrac%3E%3Cmo%3E%2B%3C%2Fmo%3E%3Cmn%3E7%3C%2Fmn%3E%3Cmfrac%3E%3Cmi%3En%3C%2Fmi%3E%3Cmn%3E2%3C%2Fmn%3E%3C%2Fmfrac%3E%3Cmo%3E%2D%3C%2Fmo%3E%3Cmn%3E4%3C%2Fmn%3E%3Cmspace%20linebreak%3D%22newline%22%2F%3E%3Cmn%3E0%3C%2Fmn%3E%3Cmo%3E%28%3C%2Fmo%3E%3Cmsup%3E%3Cmi%3En%3C%2Fmi%3E%3Cmn%3E2%3C%2Fmn%3E%3C%2Fmsup%3E%3Cmo%3E%29%3C%2Fmo%3E%3C%2Fmath%3E)
+
+
+*Codigo en Scala*
+```scala
+object InsertionSort{ 
+   def main(args: Array[String]) {
+      var A = Array(25, 2, 13, 89, 6)
+      var aux = 0
+      var a=  0
+      for (i<-1 to A.length-1){
+         aux=A(i)
+	     a=i-1
+	     while(a>=0 && A(a)>aux){
+	       A(a+1)=A(a)
+	       a=a-1
+	     }
+	     A(a+1)=aux
+      }
+      for(i<-0 to A.length-1){
+	  println(A(i))
+      }
+   }
+}
+```
